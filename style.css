@@ -1,3 +1,26 @@
+@font-face {
+    font-family: 'Orator Std';
+    src: url('assets/fonts/OratorStd.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('assets/fonts/Roboto-Regular.ttf') format('truetype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('assets/fonts/Roboto-Light.ttf') format('truetype');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('assets/fonts/Roboto-Bold.ttf') format('truetype');
+    font-weight: 700;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,9 +28,13 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Orator Std', monospace;
 }
 
 .container {
@@ -32,10 +59,9 @@ body {
     padding: 1rem 20px;
 }
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #2c5f2d;
+.logo img {
+    height: 50px;
+    width: auto;
 }
 
 .nav-menu {
@@ -51,12 +77,12 @@ body {
 }
 
 .nav-menu a:hover {
-    color: #2c5f2d;
+    color: #006837;
 }
 
 /* Hero */
 .hero {
-    background: linear-gradient(135deg, #2c5f2d 0%, #4a9d4f 100%);
+    background: linear-gradient(135deg, #006837 0%, #8CC63F 100%);
     color: white;
     padding: 8rem 0 6rem;
     text-align: center;
@@ -93,13 +119,63 @@ body {
 .about h2 {
     font-size: 2rem;
     margin-bottom: 2rem;
-    color: #2c5f2d;
+    color: #006837;
 }
 
 .about p {
     font-size: 1.1rem;
     margin-bottom: 1rem;
     max-width: 800px;
+}
+
+.team-section {
+    margin-top: 3rem;
+}
+
+.team-section h3 {
+    font-size: 1.5rem;
+    color: #006837;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #8CC63F;
+    padding-bottom: 0.5rem;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.team-member {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.member-photo {
+    width: 120px;
+    height: 120px;
+    background: #e0e0e0;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+}
+
+.team-member h4 {
+    color: #006837;
+    margin-bottom: 0.5rem;
+}
+
+.bio-placeholder {
+    color: #999;
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+.associates-note {
+    color: #999;
+    font-style: italic;
 }
 
 /* Services */
@@ -111,7 +187,7 @@ body {
     font-size: 2rem;
     margin-bottom: 3rem;
     text-align: center;
-    color: #2c5f2d;
+    color: #006837;
 }
 
 .service-grid {
@@ -133,7 +209,7 @@ body {
 }
 
 .service-card h3 {
-    color: #2c5f2d;
+    color: #006837;
     margin-bottom: 1rem;
 }
 
@@ -147,7 +223,7 @@ body {
     font-size: 2rem;
     margin-bottom: 3rem;
     text-align: center;
-    color: #2c5f2d;
+    color: #006837;
 }
 
 .project-grid {
@@ -160,11 +236,11 @@ body {
     background: white;
     padding: 2rem;
     border-radius: 8px;
-    border-left: 4px solid #2c5f2d;
+    border-left: 4px solid #006837;
 }
 
 .project-card h3 {
-    color: #2c5f2d;
+    color: #006837;
     margin-bottom: 1rem;
 }
 
@@ -177,7 +253,7 @@ body {
     font-size: 2rem;
     margin-bottom: 2rem;
     text-align: center;
-    color: #2c5f2d;
+    color: #006837;
 }
 
 .contact-form {
@@ -197,7 +273,7 @@ body {
 }
 
 .contact-form button {
-    background: #2c5f2d;
+    background: #006837;
     color: white;
     padding: 1rem;
     border: none;
