@@ -256,9 +256,19 @@
             });
         });
         
+        // Mobile service item expansion
+        if (window.innerWidth <= 768) {
+            document.querySelectorAll('.service-item').forEach(item => {
+                item.addEventListener('click', function() {
+                    this.classList.toggle('expanded');
+                });
+            });
+        }
+        
         // Service toggles
         document.querySelectorAll('.toggle-services').forEach(button => {
-            button.addEventListener('click', function() {
+            button.addEventListener('click', function(e) {
+                e.stopPropagation();
                 const serviceList = this.nextElementSibling;
                 serviceList.classList.toggle('active');
                 this.classList.toggle('active');

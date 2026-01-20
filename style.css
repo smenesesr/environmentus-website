@@ -645,6 +645,16 @@ footer .container {
         display: none;
     }
     
+    .service-item.expanded p,
+    .service-item.expanded button,
+    .service-item.expanded ul {
+        display: block;
+    }
+    
+    .service-item.expanded ul {
+        display: block;
+    }
+    
     .service-item::after {
         content: "Ver más...";
         display: block;
@@ -652,6 +662,10 @@ footer .container {
         font-style: italic;
         margin-top: 0.5rem;
         font-size: 0.9rem;
+    }
+    
+    .service-item.expanded::after {
+        content: "Ver menos";
     }
     
     .team-member {
