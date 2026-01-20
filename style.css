@@ -296,6 +296,8 @@ h1, h2, h3, h4, h5, h6 {
     background: #e0e0e0;
     border-radius: 50%;
     margin: 0 auto 1rem;
+    background-size: cover;
+    background-position: center;
 }
 
 .team-member h4 {
