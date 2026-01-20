@@ -632,6 +632,11 @@ footer .container {
     
     .service-item {
         padding: 1.5rem;
+        cursor: pointer;
+    }
+    
+    .service-item h3 {
+        margin-bottom: 0.5rem;
     }
     
     .service-item p,
@@ -643,9 +648,10 @@ footer .container {
     .service-item::after {
         content: "Ver más...";
         display: block;
-        color: #006837;
+        color: #91c8b1;
         font-style: italic;
         margin-top: 0.5rem;
+        font-size: 0.9rem;
     }
     
     .team-member {
