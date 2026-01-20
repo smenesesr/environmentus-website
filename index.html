@@ -9,6 +9,11 @@
 <body>
     <nav class="navbar">
         <div class="container">
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <ul class="nav-menu">
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#quienes-somos">Quiénes Somos</a></li>
@@ -234,6 +239,24 @@
     </footer>
 
     <script>
+        // Hamburger menu
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        menuToggle.addEventListener('click', function() {
+            this.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+        
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', function() {
+                menuToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+        
+        // Service toggles
         document.querySelectorAll('.toggle-services').forEach(button => {
             button.addEventListener('click', function() {
                 const serviceList = this.nextElementSibling;
@@ -242,6 +265,7 @@
             });
         });
 
+        // Team section toggles
         document.querySelectorAll('.toggle-team').forEach(heading => {
             heading.addEventListener('click', function() {
                 const teamContent = this.nextElementSibling;
@@ -250,6 +274,7 @@
             });
         });
 
+        // Bio toggles
         document.querySelectorAll('.toggle-bio').forEach(specialty => {
             specialty.addEventListener('click', function() {
                 const bioText = this.nextElementSibling;
